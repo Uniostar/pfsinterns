@@ -2,6 +2,7 @@ import java.text.Format;
 import java.util.*;
 public class Main
 {
+    //Rudimentry Safety
     public static final String userName = "JavaUser";
     public static final String password = "JavaIsBest";
 
