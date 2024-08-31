@@ -1,0 +1,15 @@
+Transaction Report
+=================
+
+Transaction ID: 1
+Book ID: 1
+Member ID: 1
+Transaction Date: 2024-08-25 12:14:59
+Return Date: 2024-08-27 13:24:25
+-----------------------------
+Transaction ID: 2
+Book ID: 1
+Member ID: 2
+Transaction Date: 2024-08-27 13:23:57
+Return Date: 2024-08-27 13:24:17
+-----------------------------

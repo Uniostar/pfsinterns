@@ -1,0 +1,37 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS library_db;
+USE library_db;
+
+-- Table for storing book details
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    is_available BOOLEAN DEFAULT TRUE
+);
+
+-- Table for storing patron details
+CREATE TABLE patrons (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+-- Table for storing book transactions
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT,
+    patron_id INT,
+    issue_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    return_date TIMESTAMP NULL
+);
+
+-- Insert example data into books
+INSERT INTO books (title, author, is_available) VALUES
+('1984', 'George Orwell', TRUE),
+('To Kill a Mockingbird', 'Harper Lee', TRUE);
+
+-- Insert example data into patrons
+INSERT INTO patrons (name, email) VALUES
+('John Doe', 'johndoe@example.com'),
+('Jane Smith', 'janesmith@example.com');
